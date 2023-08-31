@@ -5,16 +5,21 @@
   <meta charset="UTF-8">
   <title>Contato</title>
   <link rel="icon" type="image/x-icon" href="../src/logo-favicon.png">
-  <link rel="stylesheet" href="../style.css" </head>
+  <link rel="stylesheet" href="../style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
 <body>
   <div id="app">
     <header>
       <div class="top wrapper">
-        <a href="../index.html"><img id="logo" src="../src/tecker-orange.png"></a>
+        <a href="../index.html"><img aria-label="logo" id="logo" src="../src/tecker-orange.png"></a>
         <nav>
           <ul>
+            <li><a href="blog.html">
+                Blog
+              </a>
+            </li>
             <li><a href="portfolio.html">
                 Portfólio
               </a>
@@ -45,10 +50,9 @@
               </div>
             </div>
           </section>
-          <section class="map"><iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0"
+          <section class="map"><iframe title="maps" width="520" height="400" frameborder="0" scrolling="no" marginheight="0"
               marginwidth="0" id="gmap_canvas"
-              src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Natal+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
-              href='https://maps-generator.com/'></a>
+              src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Natal+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           </section>
         </div>
       </div>
@@ -72,7 +76,7 @@
                 <textarea type="text" id="formMessae" name="message" placeholder="Envie sua mensagem"
                   required></textarea>
                 <div class="formLGPD">
-                  <input type="checkbox" id="acept" name="LGPD" value="Aceito" required>
+                  <input title="lgpd" type="checkbox" id="acept" name="LGPD" value="Aceito" required>
                   <label for="LGPD">Declaro que li a<a href="#"> Política de Privacidade</a></label>
                 </div>
                 <br>
