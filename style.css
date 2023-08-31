@@ -222,7 +222,7 @@ main {
 .box {
   width: 25rem;
   min-height: 25rem;
-  height: fit-content;
+  height: auto;
   background-color: var(--gray-color);
   padding: 2rem;
   align-items: center;
