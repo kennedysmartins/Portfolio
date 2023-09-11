@@ -1,8 +1,10 @@
+import "./module-posts.js"
+
 const imagemCelular1 = document.getElementById("fvec")
 const imagemCelular2 = document.getElementById("smartofficern")
 const imagemCelular3 = document.getElementById("portalmanaon")
 
-const caminhoDasImagens1 = [
+const caminhoDasImagens1 = [ // Vetor de Objetos
   { src: "../src/phone-x-fvec.png" },
   { src: "../src/phone-x-fvec2.png" },
   { src: "../src/phone-x-fvec3.png" },
@@ -39,45 +41,18 @@ function nextSlide() {
 
 let meuIntervalo = setInterval(nextSlide, 3000)
 
-async function carregaPosts() {
-  const divPosts = document.getElementById("card")
-  console.log(divPosts)
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts/1/")
-  const postRecebido = await response.json()
+const projectImg = document.querySelectorAll(".projectImg")
+for(let image of projectImg) {
+  image.onclick = () => {
+    // Adiciona a classe de animação quando a imagem for clicada
+    image.classList.add("zoomIn");
 
-  divPosts.innerHTML = `
-  <br>
-  <h5>${postRecebido.title}</h5>
-  <p>${postRecebido.body}</p>
-  `
+    // Remove a classe de animação após um período de tempo (por exemplo, 1 segundo)
+    setTimeout(() => {
+      image.classList.remove("zoomIn");
+    }, 1000); // 1000ms = 1 segundo
+  };
 }
 
-carregaPosts()
 
-async function carregaComments() {
-  const divComentarios = document.getElementById("comment")
-  console.log(divComentarios)
-  const response = await fetch(
-    "https://jsonplaceholder.typicode.com/posts/1/comments"
-  )
-  const comentarioRecebido = await response.json()
 
-  let i = 1
-  comentarioRecebido.forEach((Comment) => {
-    if (i <= 2) {
-      let divComment = document.createElement("div")
-
-      divComment.innerHTML = `
-      <br>
-      <h6>${Comment.name}</h6>
-      <p>${Comment.body}</p>
-      <br>
-      `
-
-      divComentarios.appendChild(divComment)
-      i++
-    }
-  })
-}
-
-carregaComments()
