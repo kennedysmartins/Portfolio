@@ -44,13 +44,10 @@ let meuIntervalo = setInterval(nextSlide, 3000)
 const projectImg = document.querySelectorAll(".projectImg")
 for(let image of projectImg) {
   image.onclick = () => {
-    // Adiciona a classe de animação quando a imagem for clicada
     image.classList.add("zoomIn");
-
-    // Remove a classe de animação após um período de tempo (por exemplo, 1 segundo)
     setTimeout(() => {
       image.classList.remove("zoomIn");
-    }, 1000); // 1000ms = 1 segundo
+    }, 1000);
   };
 }
 
