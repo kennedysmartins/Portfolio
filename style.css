@@ -1,8 +1,22 @@
+/* @font-face {
+  font-family: 'Cera-Regular';
+  src: url("./fonts/CeraRoundPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Cera-Bold';
+  src: url("./fonts/CeraRoundPro-Bold.otf");
+} */
+
 :root {
   font-size: 62.5%;
   --primary-color: #ffa100;
   --gray-color: #f5f5f5;
   --darkgray-color: #3d4042;
+  --default-white: #ffffff;
+  --semi-white: #f7f7f7;
+  --top-white-border:#ededed;
+  --paragraph: #7a7aa2;
 }
 
 * {
@@ -15,7 +29,7 @@
 html {
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: var(--default-white);
 }
 
 body {
@@ -28,7 +42,7 @@ body {
 }
 
 header {
-  background-color: #f7f7f7;
+  background-color: var(--semi-white);
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -37,7 +51,7 @@ header {
 .top {
   padding-bottom: 10px;
   border-bottom: 1px solid;
-  border-color: #ededed;
+  border-color: var(--top-white-border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +78,7 @@ li {
 }
 
 a {
-  color: #535353;
+  color: var(--darkgray-color);
   text-decoration: none;
   font-weight: 500;
 }
@@ -82,12 +96,12 @@ a:hover {
 #contato {
   padding: 8px 20px 8px 20px;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--default-white);
   border-radius: 6px;
 }
 
 #contato:hover {
-  background-color: #cc8000;
+  background-color: var(--primary-color);
 }
 
 .wrapper {
@@ -123,15 +137,15 @@ main {
 
 .container1 h1 {
   font-size: 4rem;
-  color: #fca001;
+  color: var(--primary-color);
   font-weight: 800;
 }
 
 .container1 h2 {
   font-size: 4rem;
-  color: #fca001;
+  color: var(--primary-color);
   font-weight: 800;
-  font-family: Roboto;
+  font-family: "Roboto";
   white-space: nowrap;
 }
 
@@ -139,7 +153,7 @@ main {
   font-size: 18px;
   margin: 15px 15px 15px 0;
   font-family: sans-serif;
-  color: #7a7aa2;
+  color: var(--paragraph);
 }
 
 .container2 img {
@@ -154,7 +168,7 @@ main {
   font-size: 1.6rem;
   border-radius: 6px;
   border: solid 1px var(--primary-color);
-  color: white;
+  color: var(--default-white);
   font-weight: 600;
 }
 
@@ -163,7 +177,7 @@ main {
 }
 
 .heroButtons:hover {
-  background-color: white;
+  background-color: var(--default-white);
   color: var(--primary-color);
   border: solid 1px var(--primary-color);
   transition: 0.3s;
@@ -276,6 +290,10 @@ h4 {
   color: var(--darkgray-color);
 }
 
+.hidden {
+  display:none
+}
+
 h5 {
   font-size: 1.8rem;
   font-family: Roboto;
@@ -295,10 +313,10 @@ h5 {
 }
 
 .finalBar {
-  background-color: #f7f7f7;
-  color: #696969;
+  background-color: var(--semi-white);
+  color: var(--darkgray-color);
   padding-top: 2rem;
-  border-top: solid 1px #ededed;
+  border-top: solid 1px var(--top-white-border);
   text-align: center;
   font-weight: 600;
   font-family: sans-serif;
@@ -339,7 +357,7 @@ form button:hover {
   padding: 0.6rem;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  background-color: white;
+  background-color: var(--default-white);
   transition: 0.3s;
   cursor: pointer;
 }
@@ -391,12 +409,12 @@ form button:hover {
   margin-block: 1rem;
   cursor: pointer;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--default-white);
 }
 
 .projects button:hover {
   color: var(--primary-color);
-  background-color: white;
+  background-color: var(--default-white);
   border: 0.1rem solid var(--primary-color);
   transition: transform 0.3s;
 }
@@ -409,6 +427,12 @@ form button:hover {
   transition: transform 0.3s;
   transform: scale(1.1);
 }
+
+.zoomIn {
+  transform: scale(1.2); /* Aumenta a escala da imagem */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
 
 /* --⬆-- Página Portfólio --⬆-- Página Portfólio --⬆-- Página Portfólio --⬆-- Página Portfólio --⬆-- */
 
